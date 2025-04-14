@@ -44,11 +44,11 @@ android {
         buildConfigField("String", "VERSION_NAME", "\"${project.version}\"")
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
+//    publishing {
+//        singleVariant("release") {
+//            withSourcesJar()
+//        }
+//    }
 
     buildTypes {
         release {
@@ -69,6 +69,16 @@ android {
 
     testOptions {
         unitTests.isReturnDefaultValues = true
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("maven_public") {
+                from(components["release"])
+            }
+        }
     }
 }
 

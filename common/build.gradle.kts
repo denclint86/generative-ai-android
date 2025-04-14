@@ -43,11 +43,11 @@ android {
         buildConfigField("String", "VERSION_NAME", "\"${project.version.toString()}\"")
     }
 
-    publishing {
-        singleVariant("release") {
-            withSourcesJar()
-        }
-    }
+//    publishing {
+//        singleVariant("release") {
+//            withSourcesJar()
+//        }
+//    }
 
     buildTypes {
         release {
