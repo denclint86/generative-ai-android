@@ -46,22 +46,31 @@ private constructor(
     class Builder {
         @JvmField
         var temperature: Float? = null
+
         @JvmField
         var topK: Int? = null
+
         @JvmField
         var topP: Float? = null
+
         @JvmField
         var candidateCount: Int? = null
+
         @JvmField
         var maxOutputTokens: Int? = null
+
         @JvmField
         var stopSequences: List<String>? = null
+
         @JvmField
         var responseMimeType: String? = null
+
         @JvmField
         var responseSchema: Schema<*>? = null
+
         @JvmField
         var presencePenalty: Float? = null
+
         @JvmField
         var frequencyPenalty: Float? = null
 

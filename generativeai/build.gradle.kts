@@ -106,28 +106,28 @@ dependencies {
     dokkaPlugin("org.jetbrains.dokka:android-documentation-plugin:1.8.20")
 }
 
-publishing {
-    publications {
-        register<MavenPublication>("release") {
-            groupId = "com.google.ai.client.generativeai"
-            artifactId = "generativeai"
-            version = project.version.toString()
-            pom {
-                licenses {
-                    license {
-                        name = "The Apache License, Version 2.0"
-                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-                    }
-                }
-            }
-            afterEvaluate {
-                from(components["release"])
-            }
-        }
-    }
-    repositories {
-        maven {
-            url = uri("${projectDir}/m2")
-        }
-    }
-}
+//publishing {
+//    publications {
+//        register<MavenPublication>("release") {
+//            groupId = "com.google.ai.client.generativeai"
+//            artifactId = "generativeai"
+//            version = project.version.toString()
+//            pom {
+//                licenses {
+//                    license {
+//                        name = "The Apache License, Version 2.0"
+//                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+//                    }
+//                }
+//            }
+//            afterEvaluate {
+//                from(components["release"])
+//            }
+//        }
+//    }
+//    repositories {
+//        maven {
+//            url = uri("${projectDir}/m2")
+//        }
+//    }
+//}

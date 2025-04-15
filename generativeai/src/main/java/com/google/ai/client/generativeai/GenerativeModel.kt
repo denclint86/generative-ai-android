@@ -76,9 +76,7 @@ internal constructor(
         requestOptions: RequestOptions = RequestOptions(),
         tools: List<Tool>? = null,
         toolConfig: ToolConfig? = null,
-        systemInstruction: Content? = null,
-        presencePenalty: Float? = null,
-        frequencyPenalty: Float? = null,
+        systemInstruction: Content? = null
     ) : this(
         fullModelName(modelName),
         apiKey,
