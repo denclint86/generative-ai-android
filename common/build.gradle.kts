@@ -100,29 +100,28 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-//publishing {
-//    publications {
-//        register<MavenPublication>("release") {
-//            groupId = "com.google.ai.client.generativeai"
-//            artifactId = "common"
-//            version = project.version.toString()
-//            pom {
-//                licenses {
-//                    license {
-//                        name = "The Apache License, Version 2.0"
-//                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
-//                    }
-//                }
-//            }
-//            afterEvaluate {
-//                from(components["release"])
-//            }
-//        }
-//    }
-//    repositories {
-//        maven {
-//            url = uri("${projectDir}/m2")
-//        }
-//    }
-//}
-//
+publishing {
+    publications {
+        register<MavenPublication>("release") {
+            groupId = "com.google.ai.client.generativeai"
+            artifactId = "common"
+            version = project.version.toString()
+            pom {
+                licenses {
+                    license {
+                        name = "The Apache License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+            }
+            afterEvaluate {
+                from(components["release"])
+            }
+        }
+    }
+    repositories {
+        maven {
+            url = uri("${projectDir}/m2")
+        }
+    }
+}
